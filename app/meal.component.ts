@@ -8,7 +8,7 @@ import { Meal } from './meal.model';
     <div class="container">
       <dl>
         <dt>{{ meal.name }}</dt>
-        <dd>Details: {{ meal.name }}</dd>
+        <dd>Details: {{ meal.details }}</dd>
         <dd>Calories: {{ meal.calories }}</dd>
       </dl>
     </div>
