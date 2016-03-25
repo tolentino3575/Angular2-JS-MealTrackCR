@@ -1,4 +1,4 @@
-#Github Search Code Review
+#Meal Tracker Code Review
 Javascript Week 12 Code Review: Angular2 Basics
 
 ##Author
