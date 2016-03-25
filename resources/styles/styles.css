@@ -1,3 +1,6 @@
+$purple : #391D42;
+$beige : #E8EDE6;
+
 h1 {
   text-align: center;
 }
@@ -13,4 +16,18 @@ h1 {
 
 .healthy {
   color: green;
+}
+
+.jumbotron {
+  background: $purple;
+  color: white;
+}
+
+.btn {
+  background: $purple;
+  color: white;
+}
+
+body {
+  background: $beige;
 }

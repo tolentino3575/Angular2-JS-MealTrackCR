@@ -6,7 +6,8 @@ import { Meal } from './meal.model';
   inputs: ['meal'],
   template: `
       <h4>Details: {{ meal.details }}</h4>
-    <div [class.unhealthy]="meal.calories > 300">
+    <div [class.unhealthy]="meal.calories > 300"
+    [class.healthy]="meal.calories < 300">
       <h4>Calories: {{ meal.calories }}</h4>
     </div>
   `
