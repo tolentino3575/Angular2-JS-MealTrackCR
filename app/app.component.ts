@@ -25,8 +25,9 @@ export class AppComponent {
   constructor(){
     this.meals = [
     new Meal("Pizza", "So good", 500, 0),
-    new Meal("Steak", "MMMMMMM", 700, 0),
-    new Meal("Salad", "ew.", 25, 0),
+    new Meal("Steak", "MMMMMMM", 700, 1),
+    new Meal("Salad", "ew.", 25, 2),
+    new Meal("Water", "I'm on a diet, Ok?", 0, 3)
     ];
   }
   mealWasSelected(clickedMeal: Meal): void {

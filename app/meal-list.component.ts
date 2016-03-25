@@ -19,7 +19,7 @@ import { CaloriesPipe } from './calories.pipe';
       <option value="Unhealthy">Show unhealthy meals</option>
     </select>
 
-    <meal-display *ngFor="#currentMeal of mealList | calories:filterCal"
+    <meal-display *ngFor="#currentMeal of mealList | calories:filterHealthy"
     (click)="mealClicked(currentMeal)"
       [class.selected]="currentMeal === selectedMeal"
       [meal]="currentMeal">

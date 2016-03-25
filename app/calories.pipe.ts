@@ -15,7 +15,7 @@ export class CaloriesPipe implements PipeTransform {
       });
     } else if(containedCalories === "Unhealthy") {
       return input.filter((meal) => {
-        return meal.calories >= 300;
+        return meal.calories > 300;
       });
     } else {
       return input;
