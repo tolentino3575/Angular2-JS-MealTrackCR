@@ -13,21 +13,23 @@ import { CaloriesPipe } from './calories.pipe';
   directives: [MealDisplayComponent, NewMealComponent, EditMealComponent, MealDetailsComponent],
   pipes: [CaloriesPipe],
   template: `
-    <h4>View your healthy vs unhealthy meals</h4>
+    <h4>Healthy v Unhealthy</h4>
     <select (change)="onChangeCalories($event.target.value)">
       <option value="All" selected="selected">Show all meals</option>
       <option value="Healthy">Show healthy meals</option>
       <option value="Unhealthy">Show unhealthy meals</option>
     </select>
-
-    <div *ngFor="#currentMeal of mealList | calories:filterHealthy">
-      <meal-display (click)="mealClicked(currentMeal)"
-        [class.selected]="currentMeal === selectedMeal"
-        [meal]="currentMeal">
-      </meal-display>
-      <meal-details *ngIf="currentMeal === selectedMeal" [meal]="currentMeal"></meal-details>
-      <edit-meal *ngIf="currentMeal === selectedMeal" [meal]="selectedMeal"></edit-meal>
+    <div class="row">
+      <div class="col-md-4" *ngFor="#currentMeal of mealList | calories:filterHealthy">
+        <meal-display (click)="mealClicked(currentMeal)"
+          [class.selected]="currentMeal === selectedMeal"
+          [meal]="currentMeal">
+        </meal-display>
+        <meal-details *ngIf="currentMeal === selectedMeal" [meal]="currentMeal"></meal-details>
+        <edit-meal *ngIf="currentMeal === selectedMeal" [meal]="selectedMeal"></edit-meal>
+      </div>
     </div>
+
     <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>
 
   `
