@@ -5,3 +5,12 @@ h1 {
 .selected {
   color: #22bdf0;
 }
+
+.unhealthy {
+  font-weight: bold;
+  color: red;
+}
+
+.healthy {
+  color: green;
+}
